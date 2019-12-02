@@ -1,0 +1,437 @@
+$background-color: #fff;
+$background-color--hr: #173ea5;
+
+$text-color: #000;
+$button-color: #0cc5bc;
+$a-color-active: #0cc5bc;
+
+$font-family: 'Playfair Display',
+serif;
+
+$font-size: 14px;
+
+@mixin adaptive_background ($url) {
+    background: $url;
+
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        attachment: fixed;
+        size: cover;
+    }
+}
+
+@mixin mini_hr($margin_top, $margin_bottom) {
+    width: 50px;
+
+    margin: {
+        top: $margin_top;
+        bottom: $margin_bottom;
+    }
+
+    border: none;
+    height: 1px;
+    background-color: $background-color--hr;
+}
+
+@mixin title($size, $weight) {
+    font: {
+        size: $size;
+        weight: $weight;
+        family: $font-family;
+    }
+}
+
+@mixin button($margin_top, $margin_bottom, $padding:15px) {
+    margin: {
+        top: $margin_top;
+        bottom: $margin_bottom;
+    }
+
+    padding: 10px 27px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    background-color: #ec0d43;
+    color: #fefefe;
+    font-family: "ALSSchlangesans-Bold",
+    sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    color: $text-color;
+    background-color: #e9e9e9;
+    height: 100vh;
+    @include adaptive_background(#e9e9e9 url('../img/header_background.png'));
+    background-blend-mode: overlay;
+    padding-top: 15px;
+
+    @media screen and (max-width:991px) {
+        height: auto;
+    }
+
+    .nav-white {
+        background-color: #fff;
+    }
+
+    .nav-item {
+
+        a {
+            text: {
+                decoration: none;
+                transform: uppercase;
+            }
+
+            font: {
+                size: 13px;
+                weight: 900;
+            }
+        }
+    }
+
+    .main {
+        padding-top: 156px;
+
+        @media screen and (max-width:991px) {
+            padding-top: 50px;
+        }
+
+        hr {
+            @include mini_hr(21px, 30px);
+        }
+
+        .main__title {
+            @include title(32px, 900);
+        }
+
+        p {
+            margin: 0 auto;
+            font-size: $font-size;
+            font-weight: 100;
+
+        }
+
+        button {
+            @include button(50px, 50px);
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px gray;
+        }
+    }
+}
+
+.about-courses {
+    //height: 100vh;
+    padding-top: 15%;
+
+    @media screen and (max-width:991px) {
+        height: auto;
+    }
+
+    i {
+        color: #173ea5;
+        font-size: 55px;
+    }
+
+    .title {
+        margin-top: 35px;
+        font-size: 1 rm;
+        font-weight: bold;
+    }
+
+    .description {
+        margin: {
+            top: 15px;
+            bottom: 80px;
+        }
+
+        font-size: $font-size;
+    }
+}
+
+.annotation {
+    padding-top: 80px;
+    @include adaptive_background(#e9e9e9 url('../img/afaceri_31669200.jpg'));
+    background-blend-mode: overlay;
+    color: $text-color;
+
+    @media screen and (max-width:991px) {
+        text-align: center;
+    }
+
+    .annotation__title {
+        @include title(26px, bold);
+
+        @media screen and (max-width:991px) {
+            margin-top: 20px;
+        }
+    }
+
+    .annotation__objective {
+        margin-top: 26px;
+        font-size: $font-size;
+    }
+
+    .annotation__list-title {
+        font-size: 17px;
+    }
+
+    .annotation__list-item {
+        //list-style-image: url();
+        list-style: none;
+    }
+
+    button {
+        @include button(0px, 70px);
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px gray;
+    }
+}
+
+
+.teacher {
+    padding-top: 80px;
+    height: 100vh;
+    color: $text-color;
+
+    @media screen and (max-width:991px) {
+        height: auto;
+    }
+
+    .teacher__title {
+        @include title(22px, bold);
+    }
+
+    hr {
+        @include mini_hr(18px, 40px);
+    }
+
+    .foto {
+        img {
+            width: 183px;
+            height: 183px;
+            display: inline-block;
+            border-radius: 550px;
+            object-fit: cover;
+        }
+
+        width: 220px;
+        height: 229px;
+        background: #fff;
+
+        @media screen and (max-width:991px) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .info {
+        width: 220px;
+        height: 100px;
+        //border: 1px solid #c6c4c9;
+        margin-bottom: 60px;
+
+        @media screen and (max-width:991px) {
+            display: block;
+            margin: 10 auto;
+        }
+
+        .info__fio {
+            margin-top: 15px;
+            font-size: $font-size;
+            font-weight: 800;
+        }
+
+        .info__profession {
+            font-size: 13px;
+            color: gray;
+        }
+    }
+}
+
+.program {
+    //height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include adaptive_background(#e9e9e9 url('../img/fon.png'));
+    background-blend-mode: soft-light;
+
+    @media screen and (max-width:991px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: auto;
+    }
+
+    .program__title {
+        @include title(22px, bold);
+        margin-bottom: 50px;
+    }
+
+    .program__items {
+        display: flex;
+
+        @media screen and (max-width:991px) {
+            display: block;
+        }
+    }
+
+    .program__item {
+        list-style-type: none;
+
+        .program__time {
+            display: block;
+            font-weight: bold;
+            color: #173ea5;
+        }
+
+        //        .program__item-hidden {
+        //            display: none;
+        //        }
+    }
+}
+
+.form-record {
+    padding-top: 120px;
+
+    .form-record__title {
+        @include title(22px, bold);
+    }
+
+    input,
+    textarea {
+        margin-top: 10px;
+    }
+
+    .form-check {
+        padding-left: 40px;
+
+        @media screen and (max-width:509px) {
+
+            padding-left: 10px;
+        }
+    }
+
+    button {
+        @include button(21px, 70px, 32px);
+        display: block;
+        margin: 32px auto;
+
+        &:hover,
+        &:active {
+            box-shadow: 0 0 10px gray;
+            background-color: #ec0d43;
+        }
+    }
+}
+
+footer {
+    padding-top: 70px;
+    color: $text-color;
+    @include adaptive_background(#e9e9e9 url('../img/footer.png'));
+    background-blend-mode: overlay;
+
+    img {
+        @media screen and (max-width:991px) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .footer__address_title {
+        margin-top: 18px;
+        font-weight: 800;
+        font-size: 15px;
+
+        @media screen and (max-width:991px) {
+            text-align: center;
+        }
+    }
+
+    .adress {
+        @media screen and (max-width:991px) {
+            text-align: center;
+        }
+
+        i {
+            margin-right: 16px;
+        }
+
+        p {
+            font-size: 15px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+
+            @media screen and (max-width:991px) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .telephone {
+        font-size: $font-size;
+        margin-bottom: 70px;
+
+        @media screen and (max-width:991px) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        i {
+            margin-right: 16px;
+        }
+    }
+
+    .connection__title {
+        font-size: 15px;
+        margin-top: 18px;
+        margin-bottom: 40px;
+        font-weight: 800;
+
+        @media screen and (max-width:991px) {
+            text-align: center;
+        }
+    }
+
+    .social_icons {
+        margin-bottom: 70px;
+
+        @media screen and (max-width:991px) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        a {
+            color: $text-color;
+
+            &:hover,
+            &:active {
+                color: #173ea5;
+            }
+        }
+
+        i {
+            font-size: 25px;
+            margin-right: 20px;
+        }
+    }
+
+    .footer__copyright {
+        display: none;
+        font-size: $font-size;
+
+        @media screen and (max-width:991px) {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
