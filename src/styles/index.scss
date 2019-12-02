@@ -98,7 +98,7 @@ header {
     .main {
         padding-top: 156px;
 
-        @media screen and (max-width:462px) {
+        @media screen and (max-width:991px) {
             padding-top: 50px;
         }
 
@@ -108,7 +108,7 @@ header {
 
         .main__title {
             @include title(32px, 900);
-            @media screen and (max-width:991px) {
+            @media screen and (max-width:462px) {
                 font-size: 20px;
             }
         }
