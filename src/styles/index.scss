@@ -157,7 +157,7 @@ header {
 }
 
 .annotation {
-    padding-top: 80px;
+    padding-top: 50px;
     @include adaptive_background(#e9e9e9 url('../img/afaceri_31669200.jpg'));
     background-blend-mode: overlay;
     color: $text-color;
@@ -308,7 +308,7 @@ header {
 }
 
 .form-record {
-    padding-top: 120px;
+    padding-top: 50px;
 
     .form-record__title {
         @include title(22px, bold);
@@ -349,6 +349,7 @@ footer {
 
     @media screen and (max-width:991px) {
         background: #e9e9e9;
+        padding-top: 15px;
     }
 
     img {
