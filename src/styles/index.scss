@@ -108,6 +108,9 @@ header {
 
         .main__title {
             @include title(32px, 900);
+            @media screen and (max-width:991px) {
+                font-size: 20px;
+            }
         }
 
         p {
@@ -119,6 +122,9 @@ header {
 
         button {
             @include button(50px, 50px);
+            @media screen and (max-width:991px) {
+                margin-top: 20px;
+            }
         }
 
         button:hover {
