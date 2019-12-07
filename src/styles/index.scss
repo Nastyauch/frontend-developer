@@ -134,12 +134,7 @@ header {
 }
 
 .about-courses {
-    //height: 100vh;
     padding-top: 100px;
-
-    @media screen and (max-width:991px) {
-        //padding-top: 314px;
-    }
 
     i {
         color: #173ea5;
@@ -182,7 +177,6 @@ header {
 
     .annotation__objective {
         margin-top: 26px;
-        //font-size: $font-size;
     }
 
     .annotation__list-title {
@@ -194,9 +188,7 @@ header {
             padding-left: 0;
         }
         .annotation__list-item {
-            //list-style-image: url();
             list-style: none;
-            font-weight: bold;
         }
     }
 
@@ -249,7 +241,6 @@ header {
     .info {
         width: 220px;
         height: 100px;
-        //border: 1px solid #c6c4c9;
         margin-bottom: 60px;
 
         @media screen and (max-width:991px) {
@@ -271,7 +262,6 @@ header {
 }
 
 .program {
-    //height: 100vh;
     padding-top: 80px;
     padding-bottom: 80px;
     @include adaptive_background(#e9e9e9 url('../img/fon.png'));
@@ -306,10 +296,6 @@ header {
             font-weight: bold;
             color: #173ea5;
         }
-
-        //        .program__item-hidden {
-        //            display: none;
-        //        }
     }
 }
 
